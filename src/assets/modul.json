@@ -1,0 +1,57 @@
+{
+  "systemStatusList": [
+    {
+      "id": 1,
+      "system": "AGG",
+      "nodeStatus": [
+        {
+          "value": 80,
+          "component": "Sıcaklık",
+          "timestamp": "2023-08-16 12:00:00",
+          "unit": "Celsius",
+          "nodeError": "null"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "system": "IMU",
+      "nodeStatus": [
+        {
+          "value": 1,
+          "component": "Bağlı Olma",
+          "timestamp": "2023-08-16 12:05:00",
+          "unit": "",
+          "nodeError": "null"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "system": "PSB",
+      "nodeStatus": [
+        {
+          "value": 80,
+          "component": "CPU Kullanımı",
+          "timestamp": "2023-08-16 12:10:00",
+          "unit": "%",
+          "nodeError": "null"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "system": "GNSS",
+      "nodeStatus": [
+        {
+          "value": 1,
+          "component": "Bağlı Olma",
+          "timestamp": "2023-08-16 12:20:00",
+          "unit": "",
+          "nodeError": "null"
+        }
+      ]
+    }
+  ]
+  
+}

@@ -1,0 +1,26 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid header-item">
+    <div class="navbar-header">
+      <div class="dropdown justify-content">
+        <button
+          class="btn btn-dark btn-lg"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <i class="fas fa-user"></i>{{ userService.userName }}
+        </button>
+        <div class="dropdown-menu mr-sm-2" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" (click)="onLogout()">
+            <i class="fas fa-sign-out-alt"></i> Logout</a
+          >
+        </div>
+       
+      </div>
+      </div>
+    </div>
+  
+</nav>
+

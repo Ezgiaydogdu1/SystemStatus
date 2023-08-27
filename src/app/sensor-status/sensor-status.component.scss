@@ -1,0 +1,56 @@
+body {
+  background: white;
+}
+
+
+
+.form-control{
+  max-width: 3000; /* İstediğiniz genişliği belirleyebilirsiniz */
+  margin: 3000;
+}
+.container {
+  background:white; /* Gri arka plan rengi */
+  padding-top: 20px;
+
+}
+.centered-container {
+  display: flex;
+  justify-content: center; /* Yatayda ortala */
+  align-items: center; /* Dikeyde ortala */
+  min-height: 100vh; /* Sayfanın tamamına kadar uzanmasını sağlar */
+}
+.form-control{
+  text-align: center;
+}
+.custom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .search-container {
+    position: relative;
+    padding: 1.5rem 37rem;
+    
+  }
+  
+  .search-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .search-button i {
+    font-size: 16px;
+  }
+ 
+  
+  .centered-container{
+    padding-left: 200px;
+  }

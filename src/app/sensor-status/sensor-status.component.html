@@ -1,0 +1,53 @@
+<app-header></app-header>
+
+<body>
+  <div class="row">
+    <div class="container text-center">
+      <h3>{{ title }}</h3>
+      <div class="form-control search-container">
+        <input
+          class="form-control"
+          id="sensorName"
+          placeholder="Arama metninizi giriniz."
+          [(ngModel)]="filterText"
+        />
+        <i class="fas fa-search"></i>
+        <small id="Help" class="form-text text-muted"></small>
+      </div>
+    </div>
+
+    <div class="centered-content">
+      <div class="row">
+        <ul class="list-unstyled">
+          <li
+            *ngFor="
+              let SystemStatus of systemStatusList | sensorFilter : filterText
+            "
+            class="alert alert-danger"
+          >
+            <div class="col-6 col-md-4">
+              <h5 class="mb-1">{{ SystemStatus.system }}</h5>
+              <p class="mb-1">Sistem ID: {{ SystemStatus.id }}</p>
+              <ul class="list-unstyled">
+                <li *ngFor="let nodeStatus of SystemStatus.nodeStatus">
+                  {{ nodeStatus.component }}: {{ nodeStatus.value }}
+                  {{ nodeStatus.unit }} {{ nodeStatus.timestamp }}
+                  <br />
+                  <span *ngIf="nodeStatus.nodeError" class="text-danger">
+                    <i class="fas fa-exclamation-circle"></i>
+                    {{ nodeStatus.nodeError.description }}
+                  </span>
+                  {{
+                    nodeStatus.nodeError
+                      ? "Hata: " + nodeStatus.nodeError.description
+                      : "Hata yok"
+                  }}
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>

@@ -2,19 +2,20 @@ import { Query } from "@datorama/akita";
 import { SystemStatusState,SystemStatusStore } from "./system-status.store"
 import { SystemStatus } from "src/app/sensor-status/sensor-model";
 import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
 
-
-   
-
-
-
-export class systemStatusQuery extends Query<SystemStatusState>{
+@Injectable({
+  providedIn: 'root'
+})
+export class SystemStatusQuery extends Query<SystemStatusState>{
     constructor(private systemStateStore:SystemStatusStore){
         super(systemStateStore);
-      
-    }
-
-    add(systemStatus: SystemStatus){
-        this.systemStateStore.add(systemStatus)
+      {
+  // ...
+}
     }
 }
+
+
+
+

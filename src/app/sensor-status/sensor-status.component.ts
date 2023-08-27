@@ -3,7 +3,7 @@ import { SystemStatus, NodeStatus } from './sensor-model';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { DataService} from  'src/state/system-status.service';
-import { systemStatusQuery } from 'src/state/system-status.query';
+import { SystemStatusQuery } from 'src/state/system-status.query';
 
 
 
@@ -18,7 +18,7 @@ export class SensorStatusComponent implements OnInit {
   systemStatusList:SystemStatus[]=[]
   
  
-  constructor(private http:HttpClient,private dataService:DataService, private systemStatusQuery: systemStatusQuery){}
+  constructor(private http:HttpClient,private dataService:DataService, private systemStatusQuery: SystemStatusQuery){}
   
   
   ngOnInit(): void {

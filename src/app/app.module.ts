@@ -12,6 +12,7 @@ import { SensorFilterPipe } from './sensor-status/sensor-filter.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarModule } from 'ng-sidebar';
+import { SystemStatusQuery } from '../state/system-status.query';
 
 
 
@@ -43,7 +44,7 @@ import { SidebarModule } from 'ng-sidebar';
 
     ])
   ],
-  providers: [],
+  providers: [SystemStatusQuery],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
